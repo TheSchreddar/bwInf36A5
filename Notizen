@@ -1,0 +1,6 @@
+Aufgabe 1: 
+ - Die beste Position der Bauern sollte möglichst viele Felder so abdecken, dass sie beim nächsten Zug erreicht werden können
+ - Alle besten Startpositionen für weiß ausgespielt
+ Die möglichen Züge simuliert:
+ 1. 0w (Startposition) weiß: 4a 7a 2d 5d 8d 2g 5g 8g 
+    0s 
