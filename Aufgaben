@@ -1,0 +1,16 @@
+1. Acht weiße Bauern können den schwarzen Turm fangen, egal, wie sich dieser bewegt. Beschreibe, wie sie dabei vorgehen sollen.
+   Beschreibe auch, wie der Turm sich bewegen kann, um so lange wie möglich nicht gefangen zu werden. Implementiere die 
+   Vorgehensweisen von Bauern und Turm und visualisiere die "Treibjagd".
+
+2. Untersuche, ob sieben weiße Bauern den schwarzen Turm fangen können. Falls ja, dann beschreibe, wie die Bauern vorgehen sollen.
+   Falls nein, dann beschreibe, wie sich der Turm verhalten soll, um nie gefangen zu werden.
+   
+   Implementiere das Vorgehen der deiner Meinung nach erfolgreichen Spielpartei und ein möglichst gutes Vorgehen 
+   der anderen Spielpartei. Visualisiere das Spiel zwischen den Kontrahenten.
+   
+3. Betrachte jetzt eine wesentlich allgemeinere Situation: Es gibt k weiße Bauern, von denen sich in jedem Zug l jeweils 
+   einen Schritt bewegen. Für welche k und l können die weißen Bauern den schwarzen Turm wohl immer fangen? 
+   Was kannst du darüber herausfinden? Fange mit k = 7 an.
+   
+4. Untersuche eine weitere Variante des Spiels, zum Beispiel: Was ändert sich, falls der schwarze Turm durch eine schwarze Dame
+   ersetzt wird? Sie darf zusätzlich diagonal ziehen.
