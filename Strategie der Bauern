@@ -1,0 +1,12 @@
+Die Bauern sollten nach dem Prinzip Divide-&-Conquer agieren. 
+Das bedeutet, dass sie sich in einer Reihe in der Mitte aufstellen sollten. 
+Dadurch hat der Turm, egal wo er sich platziert, nur ein halbes Feld an Freiraum, ohne Möglichkeit, daraus zu entfliehen.
+Die Bauern könnten daraufhin einfach langsam in die Richtung des Turms bewegen, um ihn langsam am Rand zu "zerquetschen".
+Es ist sehr hilfreich, wenn die Bauern den Turm völlig einweglos einstellen können.
+Der Turm ist durch seine große Beweglichkeit in der Lage, über offene Seiten zu entfliehen, während die Bauern nicht besonders gut dazu in der Lage sind, sich auf eine neue Situation einzustellen.
+Daher ist Divide-&-Conquer eine sehr effektive Methode, um dieses Problem zu lösen.
+Man könnte die Bauern auch diagonal anordnen, das ist allerdings in der Praxis deutlich weniger effektiv...
+Nachdem die Figuren sich aufgestellt haben, sollten die Bauern sich bemühen, den Turm in die Ecke zu drängen.
+Der Grund dafür ist, dass die Bauern den Turm für ein "Matt" komplett einkreisen müssen.
+In der Ecke sind schon zwei Seiten gegeben, mit denen sie sich nicht beschäftigen müssen.
+Der Turm sollte im Gegensatz natürlich diesen Fall verhindern, so gut es geht (und es geht recht gut).
