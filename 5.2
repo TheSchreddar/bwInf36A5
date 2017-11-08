@@ -1,5 +1,16 @@
-Die Divide-&-Conquer-Methode funktioniert hier nicht mehr, da der Turm immer in der Lage ist, durch die Lücke in den Bauern zu fliehen.
-Wenn er klug spielt, kann er dabei also nicht gefangen werden, da er seinen Kopf immer wieder problemlos aus der Schlinge ziehen kann.
-Wenn er nach dieser Methode handelt, kann er nicht gefangen werden, da solche Lücken immer entstehen.
-Die Bauern wiederum haben keine große Chance den Turm in Bedrängnis zu bringen und haben daher kaum Möglichkeiten ein kluges Spiel aufzuziehen.
-Sie sollten aber versuchen die Methode aus Aufgabe 1 anzuwenden.
+Lösungsidee:
+Die Bauern können ihre alte Taktik nicht mehr anwenden, da eine Lücke entsteht, die der Turm zu seinem Vorteil nutzen kann.
+Indem er sich bei Spielbeginn exakt vor diese Lücke stellt zwingt er die Bauern dazu diese Lücke zu schließen.
+Daraufhin kann er vor die neu entstandene Lücke ziehen und die Bauern damit vor das Ursprungsproblem stellen.
+Sollten die Bauern dieses System durchbrechen und auf den Turm zu ziehen, kann dieser durch die Lücke auf die andere Seite der Bauern ziehen und hat sogar eine noch bessere Position als vorher.
+Am nächsten kommen sie einer sicheren Taktik, indem sie sich diagonal aufstellen und eine der beiden Ecken freilassen.
+Sollte der Turm sich dazu entscheiden irgendein Feld ausser diesem Freiraum zu wählen, können die Bauern die Lücke schließen, indem sie um einen Schritt in seine Richtung gehen.
+Durch die kleinere Diagonale, die sie besetzen, existiert dann keine Lücke mehr, und der Turm ist gefangen.
+Sollte er aber in in der eben angesprochenen Ecke starten, können die Bauern ihn nicht auf eine Seite zwingen und er kann durch die entstehenden Lücken ihr System durchbrechen.
+
+Umsetzung:
+Die Bauern, die in dieser Konstellation des Spiels ohne Zweifel die schwächere Partei sind, haben keine Taktik zur Verfügung, die zum Erfolg führt.
+Deshalb hier eine Darstellung der Gründe, warum verschiedene Taktiken nicht mit Erfolg gekrönt werden können, wenn der Turm klug spielt:
+Eine gerade Linie: siehe oben
+Eine Diagonale: siehe oben (ist die erfolgsversprechendste Möglichkeit)
+
