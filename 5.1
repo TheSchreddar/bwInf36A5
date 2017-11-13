@@ -1,29 +1,32 @@
 Lösungsidee:
-Es gibt einige grundsätzliche Eigenschaften dieses Spiels, deren Existenz die besten Spielweisen der Kontrahenten mehr oder weniger direkt zur Folge haben.
-Erstens können acht Bauern eine Linie bilden, die das Spielfeld lückenlos in zwei Abschnitte zerteilen kann.
-Zweitens ist die Situation des Turms aussichtslos, wenn er in keine der vier Richtungen um ihn herum ziehen zu können ohne sich selbst in Schlagreichweite eines Baern zu navigieren.
-Drittens können die Bauern den Turm nur fangen, wenn es ihnen gelingt, den Turm in einem großen Feld einzuschließen und sich ihm dann zu nähern.
-Dabei können die Bauern die Spielfeldbegrenzung als statische Helfer nutzen.
+
+Es gibt einige grundsätzliche Eigenschaften dieses Spiels, deren Existenz die Spielweisen der Kontrahenten mehr oder weniger direkt zur Folge haben.
+Erstens können acht Bauern eine Linie bilden, die das Spielfeld lückenlos in zwei Abschnitte zerteilen kann. Diese Linie ist für den Turm nicht übertretbar und kann mit den richtigen Anweisungen auch verschoben werden.
+Zweitens ist die Situation des Turms aussichtslos, wenn er in keine der vier Richtungen um ihn herum ziehen zu können ohne sich selbst in Schlagreichweite eines Bauern zu navigieren.
+Drittens können die Bauern den Turm nur fangen, wenn es ihnen gelingt, den Turm in einem großen Feld einzuschließen und sich ihm dann zu nähern. Dabei können die Bauern die Spielfeldbegrenzung als statische Helfer nutzen.
 
 Umsetzung:
+
 Taktik der Bauern:
-Die Bauern sollten die Idee, dass sie das Spielfeld teilen können für sich nutzen.
-Durch sie können sie den Turm nämlich vollständig einschließen, was ja problemlos zum Sieg führt.
-Wenn sie als eine geschlossene Kette auf den Turm zu rücken, hat dieser keine Chance ihnen zu entgehen.
-Genau das sollten sie also tun.
+
+Die Bauern sollten die Idee, dass sie das Spielfeld teilen können, für sich nutzen.
+Durch sie können sie den Turm nämlich mithilfe des Randes vollständig einschließen, was problemlos zum Sieg führt.
+
 Daher lautet die erste Anweisung für die Bauern:
-Wählt als Startformation eine Linie, die das Feld einmal durchzieht. 
-Geht dann alle nacheinander einen Schritt vorwärts. 
+Wählt als Startformation eine Linie, die das Feld einmal horizontal oder vertikal durchläuft. 
+
+Die nächsten Anweisungen sind in Form einer Schleife immer wieder auszuführen. Sie lauten folgendermaßen:
+Geht alle nacheinander einen Schritt vorwärts.
+Sobald alle Bauern auf wieder auf einer Linie stehen, können sie nacheinander den nächsten Schritt gehen.
 Dabei ist es wichtig darauf zu achten, dass die Bauern sich immer gleichmäßig bewegen, und Nachzügler aufholen lassen sollten, damit sich in ihrer Kette keine Löcher bilden, durch die der Turm fliehen könnte.
 Wenn sie diese Anweisungen befolgen, können die Bauern den Turm ohne Probleme fangen.
 
-//Ziel der Bauern ist es natürlich im so wenig Züge wie möglich zu benötigen, um den Turm zu fangen.
-//Dazu sollten sie eine Startformation wählen, bei denen sie möglichst wenig Weg 
-
 Taktik des Turms:
-Der Turm kann sich die Tatsache, dass er komplett umstellt sein muss, um von den Bauern gefangen zu sein.
-Das bedeutet, dass an jeder der vier Seiten um den Turm herum, in einem Abstand von einem Feld, ein Bauer stehen muss.
-Die Begrenzungen des Spielfeldes können den Bauern dabei sehr nützlich sein, da sie bis zu zwei von ihnen beim umstellen ersetzen können.
+
+Der Turm ist nicht in der Lage, den Bauern zu entfliehe, wenn diese die oben genannte oder eine ähnliche Taktik anwenden, um zu gewinnen.
+Er kann sich allerdings die Tatsache, dass er komplett umstellt sein muss, um von den Bauern gefangen zu werden, zu nutzen machen.
+Diese Tatsache bedeutet, dass an jeder der vier Seiten um den Turm herum, in einem Abstand von einem Feld, ein Bauer stehen muss.
+Die Begrenzungen des Spielfeldes können den stellen ersetzeBauern dabei sehr nützlich sein, da sie bis zu zwei von ihnen beim umn können.
 Der Turm sollte also versuchen, sich so lange wie möglich von Spielfeldbegrenzungen und vor allem von den Ecken fernzuhalten.
 Um möglichst viel Zeit zu gewinnen sollte er ebenfalls eine Startposition auf der Seite der Bauern (die ja eine Linie bilden) suchen, die größer ist.
 Dabei kann er innerhalb dieses Feldes recht frei vorgehen.
@@ -32,39 +35,8 @@ Ob er sich an eine Feldbegrenzung stellt oder nicht ist relativ gleichgültig, d
 Während des Spiels sollte er ebenfalls einfach ausserhalb der Reichweite der Bauern bewegen, so lange dies möglich ist.
 Dabei sollte er trotzdem verhindern in eine Ecke gedrängt zu werden.
 
-Die Bauern können den Turm sicher fangen, indem sie zu acht in der Lage sind eine komplette Zeile des Feldes einzunehmen.
-Diese können sie dann langsam in Richtung des Turms verschieben. 
-Alle anderen Taktiken sind schlechter, da für ein "Matt" mehrere Bauern beieinander benötigt werden, die den Turm in eine gezielte Richtung drängen können.
-Sollten sie am Anfang versuchen möglichst viel Platz auf dem ganzen Feld gleichzeitig zu bedrohen wird die Tatsache, dass sie so langsam sind, zu ihrem Problem.
-Bevor sich genug von ihnen um den Turm geschart haben, ist dieser schon wieder an einer anderen Stelle des Feldes, und das ganze Spiel geht von vorne los.
-
-Es wäre natürlich nach dem Prinzip "Divide & Conquer" am sinnvollsten diese Zeile möglichst mittig zu wählen, damit der Turm, egal welche Wahl er trifft, möglichst wenig Abstand zu den Bauern hat.
-Dabei stellt sich das Problem, dass das Schachfeld mit den Maßen 8x8 keine eindeutige "Mittellinie" hat, die besetzt werden kann.
-Um den Turm trotzdem so stark wie möglich zu bedrängen wie möglich, sollten die Bauern sich in einer Zickzacklinie über die Mitte des Felds aufstellen.
-Die vier Bauern, die dann immer näher zur Seite des Turms stehen reichen völlig aus, um ihn "Matt" zu setzen.
-
-Bei "Bauernopfer" gibt es die ungeschriebene Regel, dass die Bauern den Turm von allen vier Seiten umstellen müssen, um ihm seine Fluchtwege abzuschneiden, und ihn damit zu Fangen.
-Dabei sollten sie sich die Außenränder zur Hilfe nehmen, die jeweils einen Bauern ersetzen können.
-Das bedeutet, dass es ihr Ziel sein sollte, ihn in eine Ecke zu drängen, um ihn möglichst schnell zu Fangen.
-Der Turm wiederum ist zwar nicht wirklich in der Lage sich nun sinnvoll mitten im Feld zu platzieren, da er damit nur näher an die Bauern heranrückt, sollte aber wenigstens versuchen, nicht in eine der Ecken gedrängt zu werden.
-
-Im Spiel selber sollte nun der mittigste Bauer nach vorne ziehen, um damit den Turm langsam zu zwingen, sich für ein Viertel des Feldes zu entscheiden.
-Der Nachbar des gezogenen Bauers auf der Seite, in die der Turm gezogen ist (was sinnvollerweise immer die größere ist), muss daraufhin ebenfalls vorziehen, um den Turm am Flüchten zu hindern.
-Der Turm hat im Grunde keine besonderen Vorgaben mehr, wie er laufen soll.
-Er muss nur versuchen, so lange wie möglich zu verhindern, nicht in die Ecke zu kommen.
-Wenn er darin stur bleibt, kann er den äußeren Bauern auf der Seite dazu zwingen, in die Ecke zu gehen, und ihn final einzukreisen.
-Die anderen beiden, bereits gezogenen Bauern sollten sich nicht bewegen, da sie sonst dem Turm eine Möglichkeit zu Flucht geben.c
-
-
-Die Bauern sollten nach dem Prinzip Divide-&-Conquer agieren. 
-Das bedeutet, dass sie sich in einer Reihe in der Mitte aufstellen sollten. 
-Dadurch hat der Turm, egal wo er sich platziert, nur ein halbes Feld an Freiraum, ohne Möglichkeit, daraus zu entfliehen.
-Die Bauern könnten daraufhin einfach langsam in die Richtung des Turms bewegen, um ihn langsam am Rand zu "zerquetschen".
-Es ist sehr hilfreich, wenn die Bauern den Turm völlig einweglos einstellen können.
-Der Turm ist durch seine große Beweglichkeit in der Lage, über offene Seiten zu entfliehen, während die Bauern nicht besonders gut dazu in der Lage sind, sich auf eine neue Situation einzustellen.
-Daher ist Divide-&-Conquer eine sehr effektive Methode, um dieses Problem zu lösen.
-Man könnte die Bauern auch diagonal anordnen, das ist allerdings in der Praxis deutlich weniger effektiv...
-Nachdem die Figuren sich aufgestellt haben, sollten die Bauern sich bemühen, den Turm in die Ecke zu drängen.
-Der Grund dafür ist, dass die Bauern den Turm für ein "Matt" komplett einkreisen müssen.
-In der Ecke sind schon zwei Seiten gegeben, mit denen sie sich nicht beschäftigen müssen.
-Der Turm sollte im Gegensatz natürlich diesen Fall verhindern, so gut es geht (und es geht recht gut).
+Die Anweisungen des Turms lauten daher:
+Stelle dich auf die Seite der Bauern, die größer ist.
+Ziehe während des Spiels möglichst weit in die Mitte der Hälfte.
+Sobald dich ein Bauer direkt bedroht, ziehe von ihm weg.
+Präferiere auch in diesem Schritt den Zug in Richtung Mitte.
