@@ -1,6 +1,27 @@
-Wie wir in Aufgabe 2 bereits festgestellt haben, ist es 7 Bauern im normalen Spiel (l=1) nicht möglich, den Turm zu fangen.
-Setzen l = 2, ändert sich die Situation.
-Die Bauern können den Turm mit einer bestimmten Taktik sicher einkesseln.
-Ausgegangen von der Tatsache, dass der Turm wieder seine bekannte Spielweise nutzt, können die Bauern ihn mit den hier abgebildeten Zügen in eine aussichtslose Position bringen:
+Lösungsidee:
 
+In dieser Aufgabe muss im Grunde genommen nur eine Möglichkeit für jedes k und ein möglichst niedriges l gefunden werden, mit der die Bauern den Turm fangen können.
+Wir wissen bereits, dass die Kombination k = 8; l = 1 funktioniert, die Kombination k = 7; l = 1 aber nicht.
+Wir machen also nun bei k = 7; l = 2 weiter und suchen nach einer Lösung.
+Das Problem der Bauern bei ihrer Taktik mit der geraden Linie, die bei k = 8 noch funktioniert hat, das bei k = 7; l = 1 aufgetreten ist, kann mit zwei beweglichen Bauern pro Zug gelöst werden.
+Nun kann ein Bauer den Turm "stellen" und ihm seinen Ausweg nehmen, während der andere in Richtung Turm ziehen kann. 
+So ist es möglich, dass die Bauern den Turm ähnlich wie in Aufgabe 1 fangen, ohne Gefahr zu laufen, dass er ihnen entkommt.
+Graphisch sieht das ganze Prinzip ungefähr so aus:
+
+Diese Taktik funktioniert aber nicht nur bei k = 7, sondern auch bei k = 6; 5 und 4.
+Dabei müssen die Bauern nur darauf acht geben, dass in ihrer Reihe nie ein Loch entsteht, das so groß ist, dass der Turm hindurchkommt, ohne dass die Bauern ihn aufhalten können.
+Die folgenden Stellungen wären fatal für die Bauern:
+
+Interessanterweise kann der Turm die Bauern an solchen Stellen zwar zurückwerfen, aber sie können ihre Taktik problemlos in die andere Richtung fortführen.
+
+Hier einmal zur Veranschaulichung ein Ausschnitt aus einer Partie mit 4 Bauern, von denen pro Zug 2 einen Schritt gehen können:
+
+Der Turm kann die Bauern bei diesen Zahlen noch nicht zu den Lücken zwingen, die ihm das Spiel vereinfachen können, da die Linie der Bauern immer noch mindestens das halbe Spielfeld durchzieht.
+Das ändert sich bei drei Bauern.
+Hier ein Beispiel, in dem der Turm die Bauern auseinanderzieht, um anschließend auf die andere Seite zu gelangen:
+
+Daraus können wir nun nicht nur schließen, dass k = 3; l = 2 nicht lösbar ist, sondern auch, dass k = 2; l = 2 nicht funktioniert.
+Da k = 2 im Kontext nur in Verbindung mit einem l < 3 sinnvoll ist, kann ausgeschlossen werden, dass es nach den in der Aufgabe fomrulierten Regeln fü 2 Bauern überhaupt möglich ist, den Turm sicher zu fangen.
+Für k = 1 gilt das selbe. 
+Nun ist also der letzte Fall, der betrachtet werden muss: k = 3; l = 3.
 
