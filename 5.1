@@ -2,8 +2,13 @@ Lösungsidee:
 
 Es gibt einige grundsätzliche Eigenschaften dieses Spiels, deren Existenz die Spielweisen der Kontrahenten mehr oder weniger direkt zur Folge haben.
 Erstens können acht Bauern eine Linie bilden, die das Spielfeld lückenlos in zwei Abschnitte zerteilen kann. Diese Linie ist für den Turm nicht übertretbar und kann mit den richtigen Anweisungen auch verschoben werden.
+Diese Linie kann so aussehen:
+
 Zweitens ist die Situation des Turms aussichtslos, wenn er in keine der vier Richtungen um ihn herum ziehen zu können ohne sich selbst in Schlagreichweite eines Bauern zu navigieren.
-Drittens können die Bauern den Turm nur fangen, wenn es ihnen gelingt, den Turm in einem großen Feld einzuschließen und sich ihm dann zu nähern. Dabei können die Bauern die Spielfeldbegrenzung als statische Helfer nutzen.
+Hier sind drei Beispiele:
+
+Drittens können die Bauern den Turm nur sicher fangen, wenn es ihnen gelingt, den Turm in einem großen Feld einzuschließen und sich ihm dann zu nähern, ohne dass er ihre Linien durchbricht. Dabei können die Bauern die Spielfeldbegrenzung als statische Helfer nutzen.
+Bei dieser Situation, kann der Turm nur noch durch einen Fehler der Bauern entkommen.
 
 Umsetzung:
 
@@ -13,8 +18,7 @@ Die Bauern sollten die Idee, dass sie das Spielfeld teilen können, für sich nu
 Durch sie können sie den Turm nämlich mithilfe des Randes vollständig einschließen, was problemlos zum Sieg führt.
 
 Daher lautet die erste Anweisung für die Bauern:
-Wählt als Startformation eine Linie, die das Feld einmal horizontal oder vertikal durchläuft. 
-
+Wählt als Startformation eine Linie, die das Feld einmal horizontal oder vertikal durchläuft, so wie in der Lösungsidee bereits demonstriert.
 Die nächsten Anweisungen sind in Form einer Schleife immer wieder auszuführen. Sie lauten folgendermaßen:
 Geht alle nacheinander einen Schritt vorwärts.
 Sobald alle Bauern auf wieder auf einer Linie stehen, können sie nacheinander den nächsten Schritt gehen.
@@ -40,3 +44,8 @@ Stelle dich auf die Seite der Bauern, die größer ist.
 Ziehe während des Spiels möglichst weit in die Mitte der Hälfte.
 Sobald dich ein Bauer direkt bedroht, ziehe von ihm weg.
 Präferiere auch in diesem Schritt den Zug in Richtung Mitte.
+
+Die gesamte Grundaufstellung des Spiels könnte deshalb so aussehen:
+
+
+Implementierung:
